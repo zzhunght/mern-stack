@@ -1,0 +1,55 @@
+// dang ky
+POST  http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"zzhunght",
+    "password":"hung1234"
+}
+
+################################
+// dang nhap
+POST  http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"zzhunght",
+    "password":"hung1234"
+}
+
+#######
+// dang muc tieu
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Barer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk3MGJhNTI5NmFkY2VmMWJlODE1ZjQiLCJpYXQiOjE2Mzc4OTM5ODJ9.4Pm-D644tkNVVOMq6gEAmPQxpk_lRkuVMB5achhj93M
+
+{
+    "title":"second post",
+    "description":"hoc react/express",
+    
+    "url": "youtube.com",
+    "status": "LEARNING"
+}
+
+################################
+GET http://localhost:5000/api/posts
+Authorization: Barer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk3NjhhZDE4NmMzNTVmNDU0MGQ3ZWUiLCJpYXQiOjE2MzczMTI2OTV9.fntQBnNm4_PEN2GbDnDJAW5fK9LVorcgJnkn_zPArko
+################################
+// update post
+PUT http://localhost:5000/api/posts/61976c4ae9e26e58a43aa412
+Content-Type: application/json
+Authorization: Barer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk3NjhhZDE4NmMzNTVmNDU0MGQ3ZWUiLCJpYXQiOjE2MzczMTI2OTV9.fntQBnNm4_PEN2GbDnDJAW5fK9LVorcgJnkn_zPArko
+
+{
+    "title":"Reactjs",
+    "description":"My favorite javascript library",
+    "url":" react.org",
+    "status":"LEARNED"
+}
+
+################################
+// delete post
+DELETE  http://localhost:5000/api/posts/619768eb186c355f4540d7f1
+Authorization: Barer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk3NjhhZDE4NmMzNTVmNDU0MGQ3ZWUiLCJpYXQiOjE2MzczMTI2OTV9.fntQBnNm4_PEN2GbDnDJAW5fK9LVorcgJnkn_zPArko
+
